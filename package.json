@@ -1,0 +1,35 @@
+{
+  "name": "@failean/shared-types",
+  "version": "3.9.96",
+  "description": "shared types",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "restricted"
+  },
+  "scripts": {
+    "prebuild": "npm run version:patch",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version",
+    "update": "npx npm-check-updates -u",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && cp package.json ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/failean/shared-types.git"
+  },
+  "author": "Michael Nusair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/failean/shared-types/issues"
+  },
+  "homepage": "https://github.com/failean/shared-types#readme",
+  "dependencies": {
+    "mongoose": "^7.2.2",
+    "typescript": "^5.1.3"
+  }
+}
