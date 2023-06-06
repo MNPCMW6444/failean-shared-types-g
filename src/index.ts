@@ -1,3 +1,11 @@
+export interface AppName {
+  low: string;
+  up: string;
+  special: string;
+  allUp: string;
+  //more...
+}
+
 export type PromptPartType = "static" | "variable";
 
 export interface PromptPart {
