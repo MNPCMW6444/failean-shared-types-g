@@ -16,7 +16,4 @@ export interface PromptPart {
 export type Prompt = PromptPart[];
 export type PromptMap = Record<string, Prompt>;
 
-export interface TreeNode {
-  name: string;
-  children: TreeNode[];
-}
+export type PromptGraph = { name: string; level: number }[];
