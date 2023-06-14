@@ -43,3 +43,7 @@ export interface WhiteUser {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export interface OpenAiPromise {
+  stringifiedOpenAiPromise: string;
+}
