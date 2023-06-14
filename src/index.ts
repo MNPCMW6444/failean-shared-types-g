@@ -39,7 +39,7 @@ export interface WhiteUser {
   email: string;
   passwordHash: string;
   name: string;
-  subscription: string;
+  subscription: "free" | "premium" | "tokens";
   createdAt: Date;
   updatedAt: Date;
 }
