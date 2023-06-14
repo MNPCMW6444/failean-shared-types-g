@@ -16,7 +16,9 @@ export interface PromptPart {
 export type Prompt = PromptPart[];
 export type PromptMap = Record<string, Prompt>;
 
-export type PromptGraph = { name: string; level: number }[];
+export type PromptName = keyof PromptMap;
+
+export type PromptGraph = { name: PromptName; level: number }[];
 
 export interface WhiteRequestForAccount {
   email: string;
