@@ -1,6 +1,6 @@
 {
   "name": "@failean/shared-types",
-  "version": "3.9.100",
+  "version": "3.9.104",
   "description": "shared types",
   "type": "module",
   "main": "dist/index.js",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/failean/shared-types#readme",
   "dependencies": {
-    "mongoose": "^7.2.2",
+    "mongoose": "^7.3.0",
     "typescript": "^5.1.3"
   }
 }
