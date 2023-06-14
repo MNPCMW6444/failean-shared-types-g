@@ -1,3 +1,6 @@
+import { AxiosResponse } from "axios";
+import { CreateChatCompletionResponse } from "openai";
+
 export interface AppName {
   low: string;
   up: string;
@@ -44,6 +47,10 @@ export interface WhiteUser {
   updatedAt: Date;
 }
 
-export interface OpenAIPromise {
+export type OpenAIPromise = Promise<
+  AxiosResponse<CreateChatCompletionResponse, any>
+>;
+
+export interface WhiteOpenAIPromise {
   stringifiedOpenAIPromise: string;
 }
