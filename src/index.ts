@@ -55,3 +55,9 @@ export type OpenAIPromise = Promise<
 export interface WhiteOpenAIPromise extends Document {
   stringifiedOpenAIPromise: string;
 }
+
+export interface GroupedPrompt {
+  groupName: string;
+  prompt: Prompt;
+  level: number;
+}
