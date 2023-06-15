@@ -65,4 +65,4 @@ export interface GroupedPrompt {
   level: number;
 }
 
-export type roleMap = Record<string, string>;
+export type RoleMap = Record<string, string>;
