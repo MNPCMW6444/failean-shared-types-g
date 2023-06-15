@@ -17,8 +17,11 @@ export interface PromptPart {
   content: string;
 }
 
-export type Prompt = PromptPart[];
-export type PromptMap = Record<string, Prompt>;
+export interface ChatCompletion {
+  role: keyof roleMap;
+  prompt: PromptPart[];
+}
+export type PromptMap = Record<string, ChatCompletion>;
 
 export type PromptName = keyof PromptMap;
 
@@ -58,7 +61,7 @@ export interface WhiteOpenAIPromise extends Document {
 
 export interface GroupedPrompt {
   groupName: string;
-  prompt: Prompt;
+  prompt: ChatCompletion;
   level: number;
 }
 
