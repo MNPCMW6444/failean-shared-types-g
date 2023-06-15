@@ -1,4 +1,4 @@
-import { Document } from "mongoose";
+import mongoose, { Document } from "mongoose";
 import { AxiosResponse } from "axios";
 import { CreateChatCompletionResponse } from "openai";
 
@@ -56,7 +56,10 @@ export type OpenAIPromise = Promise<
 >;
 
 export interface WhiteOpenAIPromise extends Document {
+  owner: mongoose.Types.ObjectId;
   stringifiedOpenAIPromise: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface GroupedPrompt {
@@ -68,5 +71,18 @@ export interface GroupedPrompt {
 export type RoleMap = Record<string, string>;
 
 export interface WhiteToken extends Document {
+  owner: mongoose.Types.ObjectId;
   transaction: number;
+  description: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface WhitePromptResultModal {
+  owner: mongoose.Types.ObjectId;
+  ideaId: string;
+  promptName: string;
+  data: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
