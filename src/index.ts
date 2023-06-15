@@ -66,3 +66,7 @@ export interface GroupedPrompt {
 }
 
 export type RoleMap = Record<string, string>;
+
+export interface Whitetoken extends Document {
+  transaction: number;
+}
