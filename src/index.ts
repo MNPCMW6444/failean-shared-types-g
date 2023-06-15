@@ -18,7 +18,7 @@ export interface PromptPart {
 }
 
 export interface ChatCompletion {
-  role: keyof roleMap;
+  role: keyof RoleMap;
   prompt: PromptPart[];
 }
 export type PromptMap = Record<string, ChatCompletion>;
