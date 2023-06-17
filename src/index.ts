@@ -78,11 +78,19 @@ export interface WhiteToken extends Document {
   updatedAt: Date;
 }
 
-export interface WhitePromptResultModal {
+export interface WhitePromptResult extends Document {
   owner: mongoose.Types.ObjectId;
   ideaId: string;
   promptName: string;
   data: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface WhiteIdea extends Document {
+  owner: mongoose.Types.ObjectId;
+  idea: string;
+  archived: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
