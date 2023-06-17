@@ -94,3 +94,5 @@ export interface WhiteIdea extends Document {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export * from "./api/index";

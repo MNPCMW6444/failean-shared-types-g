@@ -4,13 +4,14 @@ import {
   WhiteIdea,
   WhitePromptResult,
   WhiteUser,
-} from ".";
+} from "..";
 
 export namespace API {
   export namespace Accounts {
     export namespace CountTokens {
       export interface Res {
-        tokens: number;
+        tokens?: number;
+        errorMessage?: string;
       }
     }
     export namespace AddTokens {
