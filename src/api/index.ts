@@ -1,10 +1,10 @@
-import {
-  PromptGraph,
-  PromptName,
-  WhiteIdea,
-  WhitePromptResult,
-  WhiteUser,
-} from "..";
+import { PromptGraph, PromptName } from "..";
+
+import { WhiteModels } from "../white-models/index";
+
+type WhiteIdea = WhiteModels.Data.Ideas.WhiteIdea;
+type WhitePromptResult = WhiteModels.Data.Prompts.WhitePromptResult;
+type WhiteUser = WhiteModels.Auth.WhiteUser;
 
 export namespace API {
   export namespace Accounts {
