@@ -53,6 +53,7 @@ export namespace WhiteModels {
         owner: mongoose.Types.ObjectId;
         ideaId: string;
         promptName: string;
+        reason: "run" | "feedback" | "save";
         data: string;
         createdAt: Date;
         updatedAt: Date;
