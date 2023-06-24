@@ -24,7 +24,11 @@ export type PromptMap = Record<string, ChatCompletion>;
 
 export type PromptName = keyof PromptMap;
 
-export type PromptGraph = { name: PromptName; level: number }[];
+export type PromptGraph = {
+  name: PromptName;
+  deps: PromptName[];
+  level: number;
+}[];
 
 export type OpenAIPromise = Promise<
   AxiosResponse<CreateChatCompletionResponse, any>
