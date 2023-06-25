@@ -31,7 +31,13 @@ export interface PromptWireframe {
   level: number;
 }
 
+export interface Prompt extends PromptWireframe {
+  result: WhiteModels.Data.Prompts.WhitePromptResult;
+}
+
 export type PromptWireframeGraph = PromptWireframe[];
+
+export type PromptGraph = Prompt[];
 
 export interface Prompt extends PromptWireframe {
   result: WhiteModels.Data.Prompts.WhitePromptResult;
