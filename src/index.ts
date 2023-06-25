@@ -1,5 +1,3 @@
-import { AxiosResponse } from "axios";
-import { CreateChatCompletionResponse } from "openai";
 import { WhiteModels } from "./white-models/index";
 
 export interface AppName {
@@ -31,21 +29,13 @@ export interface PromptWireframe {
   level: number;
 }
 
-export interface Prompt extends PromptWireframe {
-  result: WhiteModels.Data.Prompts.WhitePromptResult;
-}
-
 export type PromptWireframeGraph = PromptWireframe[];
 
 export type PromptGraph = Prompt[];
 
 export interface Prompt extends PromptWireframe {
-  result: WhiteModels.Data.Prompts.WhitePromptResult;
+  result: WhiteModels.Data.Prompts.WhitePromptResult | "empty" | "idea";
 }
-
-export type OpenAIPromise = Promise<
-  AxiosResponse<CreateChatCompletionResponse, any>
->;
 
 export interface GroupedPrompt {
   groupName: string;
