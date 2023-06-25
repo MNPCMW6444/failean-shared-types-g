@@ -1,6 +1,6 @@
 {
   "name": "@failean/shared-types",
-  "version": "2.9.132",
+  "version": "2.9.133",
   "description": "shared types",
   "type": "module",
   "main": "dist/index.js",
@@ -14,9 +14,11 @@
     "version:patch": "npm version patch --no-git-tag-version",
     "version:minor": "npm version minor --no-git-tag-version",
     "version:major": "npm version major --no-git-tag-version",
-    "update": "npx npm-check-updates -u",
-    "clean": "rm -rf dist",
-    "build": "npm run clean && tsc && cp package.json ./dist"
+    "update": "npm i",
+    "preupdate": "npx npm-check-updates -u",
+    "cleanbuild": "rm -rf dist",
+    "clean": "rm -rf node_modules package-lock.json",
+    "build": "npm run cleanbuild && tsc && cp package.json ./dist"
   },
   "repository": {
     "type": "git",
