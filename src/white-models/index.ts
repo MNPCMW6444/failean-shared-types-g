@@ -68,5 +68,26 @@ export namespace WhiteModels {
         updatedAt: Date;
       }
     }
+
+    export namespace Critiq {
+      export interface WhiteCritiq extends Document {
+        owner: mongoose.Types.ObjectId;
+        steps: Step[];
+        archived: boolean;
+        createdAt: Date;
+        updatedAt: Date;
+      }
+
+      interface Step {
+        title: string;
+        answers: Answer[];
+      }
+
+      interface Answer {
+        question: string;
+        selectedOption: string;
+        additionalDetail?: string;
+      }
+    }
   }
 }

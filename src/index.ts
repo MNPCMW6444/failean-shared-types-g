@@ -45,5 +45,14 @@ export interface GroupedPrompt {
 
 export type RoleMap = Record<string, string>;
 
+export interface FormData {
+  marketValidation: string;
+  userFeedback: string;
+  financialResources: string;
+  technicalResources: string;
+  partnership: string;
+  productOrService: string;
+}
+
 export * from "./api/index";
 export * from "./white-models/index";
