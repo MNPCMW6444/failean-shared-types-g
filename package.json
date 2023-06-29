@@ -16,6 +16,8 @@
     "version:major": "npm version major --no-git-tag-version",
     "update": "npm i",
     "preupdate": "npx npm-check-updates -u",
+    "pub": "npm publish",
+    "prepub": "npm run build",
     "cleanbuild": "rm -rf dist",
     "clean": "rm -rf node_modules package-lock.json",
     "build": "npm run cleanbuild && tsc && cp package.json ./dist"
