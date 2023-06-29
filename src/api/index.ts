@@ -142,7 +142,7 @@ export namespace API {
     export namespace RunAndGetPromptResult {
       export interface Req {
         ideaId: string;
-        promptNames: PromptName;
+        promptNames: PromptName[];
         feedback?: string;
       }
       export interface Res {
