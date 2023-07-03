@@ -5,11 +5,21 @@ export namespace OCModels {
     stringified: string;
   }
 
-  export interface SigninReq extends Document {
-    stringifiedReq: string;
-    successfull: boolean;
-    userEmail: string;
-    time: Date;
-    reason?: string;
+  export namespace Auth {
+    export interface SigninReq extends Document {
+      stringifiedReq: string;
+      successfull: boolean;
+      userEmail: string;
+      time: Date;
+      reason?: string;
+    }
+  }
+  export namespace Data {
+    export interface InvalidPrompt extends Document {
+      stringifiedReq: string;
+      prompt: string;
+      promptName: string;
+      ideaId: string;
+    }
   }
 }
