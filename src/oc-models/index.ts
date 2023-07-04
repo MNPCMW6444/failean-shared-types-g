@@ -15,13 +15,26 @@ export namespace OCModels {
     }
   }
   export namespace Data {
-    export interface InvalidPrompt extends Document {
-      stringifiedReq: string;
-      stringifiedCompletion: string;
-      prompt: string;
-      result: string;
-      promptName: string;
-      ideaId: string;
+    export namespace Prompts {
+      export interface InvalidPrompt extends Document {
+        stringifiedReq: string;
+        stringifiedCompletion: string;
+        prompt: string;
+        result: string;
+        promptName: string;
+        ideaId: string;
+      }
+
+      export interface OpenAICall extends Document {
+        stringifiedReq: string;
+        //...
+      }
+
+      export interface PromptPrice extends Document {
+        openAICallId: string;
+        promptName: string;
+        forAVGPriceInOpenAITokens: number;
+      }
     }
   }
 }
