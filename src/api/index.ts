@@ -116,7 +116,7 @@ export namespace API {
     export namespace SaveIdea {
       export interface Req {
         idea: string;
-        ideaId: string;
+        ideaID: string;
       }
       export interface Res {
         message: string;
@@ -124,7 +124,7 @@ export namespace API {
     }
     export namespace ArchiveIdea {
       export interface Req {
-        ideaId: string;
+        ideaID: string;
       }
       export interface Res {
         message: string;
@@ -132,7 +132,7 @@ export namespace API {
     }
     export namespace GetPromptResult {
       export interface Req {
-        ideaId: string;
+        ideaID: string;
         promptName: PromptName;
       }
       export interface Res {
@@ -141,7 +141,7 @@ export namespace API {
     }
     export namespace RunAndGetPromptResult {
       export interface Req {
-        ideaId: string;
+        ideaID: string;
         promptNames: PromptName[];
         feedback?: string;
       }
@@ -151,7 +151,7 @@ export namespace API {
     }
     export namespace SavePromptResult {
       export interface Req {
-        ideaId: string;
+        ideaID: string;
         promptName: PromptName;
         data: string;
       }

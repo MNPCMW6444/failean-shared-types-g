@@ -51,7 +51,7 @@ export namespace WhiteModels {
     export namespace Prompts {
       export interface WhitePromptResult extends Document {
         owner: mongoose.Types.ObjectId;
-        ideaId: string;
+        ideaID: string;
         promptName: string;
         reason: "run" | "feedback" | "save";
         data: string;
@@ -61,7 +61,7 @@ export namespace WhiteModels {
 
       export interface WhiteTask extends Document {
         owner: mongoose.Types.ObjectId;
-        ideaId: string;
+        ideaID: string;
         promptName: string;
         taskId: number;
         createdAt: Date;

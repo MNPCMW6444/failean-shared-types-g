@@ -1,13 +1,13 @@
 import { Document } from "mongoose";
 
 export namespace OCModels {
-  export interface RestRequest extends Document {
-    stringified: string;
+  export interface ExpressRequest extends Document {
+    stringifiedReq: string;
+    stringifiedRes: string;
   }
 
   export namespace Auth {
     export interface SigninReq extends Document {
-      stringifiedReq: string;
       successfull: boolean;
       userEmail: string;
       time: Date;
@@ -16,18 +16,17 @@ export namespace OCModels {
   }
   export namespace Data {
     export namespace Prompts {
-      export interface InvalidPrompt extends Document {
-        stringifiedReq: string;
+      export interface OpenAICall extends Document {
+        stringifiedParams: string;
         stringifiedCompletion: string;
+      }
+
+      export interface InvalidPrompt extends Document {
+        callId: string;
         prompt: string;
         result: string;
         promptName: string;
-        ideaId: string;
-      }
-
-      export interface OpenAICall extends Document {
-        stringifiedReq: string;
-        //...
+        ideaID: string;
       }
 
       export interface PromptPrice extends Document {
