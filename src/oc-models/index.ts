@@ -44,4 +44,13 @@ export namespace OCModels {
       }
     }
   }
+
+  export namespace ClientAnalytics {
+    export interface PageRedner extends Document {
+      page: string;
+    }
+    export interface SidebarClick extends Document {
+      route: string;
+    }
+  }
 }
