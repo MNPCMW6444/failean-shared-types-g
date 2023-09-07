@@ -6,7 +6,6 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prebuild": "npm run version:patch",
     "version:patch": "npm version patch --no-git-tag-version",
     "version:minor": "npm version minor --no-git-tag-version",
     "version:major": "npm version major --no-git-tag-version",
@@ -16,7 +15,8 @@
     "prepub": "npm run build",
     "cleanbuild": "rm -rf dist",
     "clean": "rm -rf node_modules package-lock.json",
-    "build": "npm run cleanbuild && tsc && cp package.json ./dist"
+    "build": "npm run cleanbuild && tsc && cp package.json ./dist",
+    "prebuild": "npm run update && npm run version:patch"
   },
   "repository": {
     "type": "git",
