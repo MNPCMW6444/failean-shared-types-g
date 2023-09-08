@@ -90,4 +90,13 @@ export namespace WhiteModels {
       }
     }
   }
+
+  export namespace ABTest {
+    export interface EmailModel extends Document {
+      email: string;
+      product: string;
+    }
+  }
+
+
 }
