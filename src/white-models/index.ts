@@ -93,8 +93,10 @@ export namespace WhiteModels {
 
   export namespace ABTest {
     export interface EmailModel extends Document {
-      email: string;
-      product: string;
+      email?: string;
+      product?: string;
+      emailSent?:string;
+      deleted?:string
     }
   }
 
