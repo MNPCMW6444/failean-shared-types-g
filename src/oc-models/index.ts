@@ -50,7 +50,7 @@ export namespace OCModels {
       export interface PromptPrice extends Document {
         openAICallReqUUID: string;
         promptName: string;
-        priceInOpenAITokensForAVG: number;
+        forAVGPriceInOpenAITokens: number;
         createdAt: Date;
         updatedAt: Date;
       }

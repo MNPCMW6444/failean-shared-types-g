@@ -106,5 +106,15 @@ export namespace WhiteModels {
     }
   }
 
+  export namespace Tasks {
+    export interface OpenAITaskModel extends Document{
+      startTime: Date;
+      finishTime?: Date;
+      status: String;
+      promptResIDOrReason?: String;
+      userID:string;
+    }
+  }
+
 
 }

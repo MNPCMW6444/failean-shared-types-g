@@ -56,7 +56,7 @@ export interface FormData {
 
 
 export interface OpenAIJob {
-  user: WhiteModels.Auth.WhiteUser;
+  taskID: string;
   ideaID: string;
   promptName: PromptName;
   feedback?: string;
