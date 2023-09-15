@@ -1,4 +1,5 @@
 import mongoose, { Document } from "mongoose";
+import {PromptName} from "../index";
 
 export namespace WhiteModels {
   export namespace Accounts {
@@ -113,6 +114,7 @@ export namespace WhiteModels {
       status: String;
       promptResIDOrReason?: String;
       userID:string;
+      promptName:PromptName;
     }
   }
 
