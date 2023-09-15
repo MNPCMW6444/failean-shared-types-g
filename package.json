@@ -1,6 +1,6 @@
 {
   "name": "@failean/shared-types",
-  "version": "2.9.168",
+  "version": "2.9.169",
   "description": "shared types",
   "type": "module",
   "main": "dist/index.js",

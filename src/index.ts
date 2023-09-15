@@ -54,6 +54,16 @@ export interface FormData {
   productOrService: string;
 }
 
+
+export interface OpenAIJob {
+  user: WhiteModels.Auth.WhiteUser;
+  ideaID: string;
+  promptName: PromptName;
+  feedback?: string;
+  reqUUID: string;
+  id?: number;
+}
+
 export * from "./api/index";
 export * from "./white-models/index";
 export * from "./oc-models/index";
