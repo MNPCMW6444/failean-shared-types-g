@@ -4,11 +4,15 @@ export namespace OCModels {
   export interface ExpressRequest extends Document {
     uuid: string;
     stringifiedReq: string;
+    createdAt: Date;
+    updatedAt: Date;
   }
 
   export interface ExpressResponse extends Document {
     uuid: string;
     stringifiedRes: string;
+    createdAt: Date;
+    updatedAt: Date;
   }
 
   export namespace Auth {
@@ -18,6 +22,8 @@ export namespace OCModels {
       userEmail: string;
       time: Date;
       reason?: string;
+      createdAt: Date;
+      updatedAt: Date;
     }
   }
 
@@ -27,6 +33,8 @@ export namespace OCModels {
         reqUUID: string;
         stringifiedParams: string;
         stringifiedCompletion: string;
+        createdAt: Date;
+        updatedAt: Date;
       }
 
       export interface InvalidPrompt extends Document {
@@ -35,12 +43,16 @@ export namespace OCModels {
         result: string;
         promptName: string;
         ideaID: string;
+        createdAt: Date;
+        updatedAt: Date;
       }
 
       export interface PromptPrice extends Document {
         openAICallReqUUID: string;
         promptName: string;
         priceInOpenAITokensForAVG: number;
+        createdAt: Date;
+        updatedAt: Date;
       }
     }
   }
@@ -48,9 +60,13 @@ export namespace OCModels {
   export namespace ClientAnalytics {
     export interface PageRedner extends Document {
       page: string;
+      createdAt: Date;
+      updatedAt: Date;
     }
     export interface SidebarClick extends Document {
       route: string;
+      createdAt: Date;
+      updatedAt: Date;
     }
   }
 }

@@ -16,15 +16,15 @@ export namespace WhiteModels {
       email: string;
       key: string;
       idea?: string;
-      createdAt?: Date;
-      updatedAt?: Date;
+      createdAt: Date;
+      updatedAt: Date;
     }
 
     export interface WhiteRequestForPassChange extends Document {
       email: string;
       key: string;
-      createdAt?: Date;
-      updatedAt?: Date;
+      createdAt: Date;
+      updatedAt: Date;
     }
 
     export interface WhiteUser extends Document {
@@ -81,12 +81,16 @@ export namespace WhiteModels {
       interface Step {
         title: string;
         answers: Answer[];
+        createdAt: Date;
+        updatedAt: Date;
       }
 
       interface Answer {
         question: string;
         selectedOption: string;
         additionalDetail?: string;
+        createdAt: Date;
+        updatedAt: Date;
       }
     }
   }
@@ -97,6 +101,8 @@ export namespace WhiteModels {
       product?: string;
       emailSent?:string;
       deleted?:string
+      createdAt: Date;
+      updatedAt: Date;
     }
   }
 
