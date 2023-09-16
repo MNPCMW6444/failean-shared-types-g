@@ -1,4 +1,4 @@
-import { WhiteModels } from "./white-models/index.js";
+import { WhiteModels } from "./white-models/index";
 
 export interface AppName {
   low: string;

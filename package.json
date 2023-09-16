@@ -1,8 +1,7 @@
 {
   "name": "@failean/shared-types",
-  "version": "2.9.175",
+  "version": "2.9.176",
   "description": "shared types",
-  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
