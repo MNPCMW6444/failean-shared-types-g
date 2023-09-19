@@ -32,7 +32,7 @@ export namespace WhiteModels {
       email: string;
       passwordHash: string;
       name: string;
-      subscription: "free" | "premium" | "tokens";
+      subscription: "free" | "basic" | "premium";
       createdAt: Date;
       updatedAt: Date;
     }
